@@ -1,1 +1,1 @@
-//
+import './landing_navbar.js';

@@ -11,25 +11,47 @@
 <body class="bg-gray-50 text-gray-800">
 
 <!-- Navbar -->
-<nav class="fixed w-full flex justify-between items-center px-10 py-5 bg-white shadow-sm z-50">
-    <div class="w-30 h-8 bg-no-repeat bg-cover" style="background-image: url('images/progrest_logo_green.png')"></div>
+<nav class="fixed w-full bg-white shadow-sm z-50">
+    
+    <div class="flex justify-between items-center px-10 py-5">
+        <!-- Logo -->
+        <div class="w-30 h-8 bg-no-repeat bg-cover"
+            style="background-image: url('images/progrest_logo_green.png')"></div>
 
-    <div class="flex gap-4 items-center">
-        <a href="#" class="text-gray-600">Sign In</a>
-        <a href="#" class="bg-[#14452F] hover:bg-[#217750]  text-white px-5 py-2 rounded-lg font-semibold">
+        <!-- Desktop -->
+        <div class="hidden sm:flex gap-4 items-center">
+            <a href="/sign-in" class="text-gray-600">Sign In</a>
+            <a href="/register" class="bg-[#14452F] hover:bg-[#217750] text-white px-5 py-2 rounded-lg font-semibold">
+                Get Started Free
+            </a>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="sm:hidden text-2xl hover:rotate-90 transition duration-300">
+            ☰
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col items-center gap-4 px-10">
+        
+        <a href="/sign-in" class="text-gray-600 py-2">Sign In</a>
+        <a href="/register" class="bg-[#14452F] text-white px-5 py-2 rounded-lg font-semibold mb-4">
             Get Started Free
         </a>
     </div>
+
 </nav>
 
 <div class="pt-20"></div>
 
 <!-- HERO -->
-<section class="px-10 py-20 grid md:grid-cols-2 xl:grid-cols-[2fr_3fr] gap-6 items-center bg-linear-to-r from-white to-[#E9F2EE]">
+<section class="px-10 py-20 grid md:grid-cols-2 md:gap-6 sm:gap-12 xl:grid-cols-[2fr_3fr] gap-12 items-center bg-linear-to-r from-white to-[#E9F2EE]">
 
     <!-- kiri -->
     <div>
-        <div class="text-white inline-block font-medium mb-4 px-6 py-2 bg-[#217750] rounded-2xl shadow-md">
+        <div class="text-white inline-block font-medium mb-4 px-6 py-3 bg-[#217750] rounded-2xl shadow-md">
             ⚙︎ Designed for teams. Built for progress.
         </div>
 
@@ -43,14 +65,14 @@
             Stay aligned, meet deadlines, and achieve more—together.
         </p>
 
-        <div class="flex gap-4 mb-6">
-            <a href="#" class="bg-[#217750] hover:bg-[#14452F] transition text-white px-6 py-3 rounded-lg font-semibold shadow-md">
+        <div class="flex gap-4 mb-6 text-md">
+            <a href="/register" class="bg-[#217750] hover:bg-[#14452F] transition text-center text-white px-6 py-3 rounded-lg font-semibold shadow-md">
                 Get Started Free
             </a>
 
-            <a href="#" class="border-2 border-gray-300  hover:bg-gray-100 px-6 py-3 rounded-lg font-medium shadow-md transition">
+            <button id="scroll-features" class="border-2 border-gray-300 bg-white  hover:bg-gray-100 text-center px-6 py-3 rounded-lg font-medium shadow-md transition">
                 See How It Works
-            </a>
+            </button>
         </div>
 
         <div class="flex gap-6 text-sm text-gray-500">
@@ -79,7 +101,7 @@
 </section>
 
 <!-- Fiturs -->
-<section class="px-10 py-20 bg-linear-to-r from-white to-[#E9F2EE] text-center">
+<section id="features" class="px-10 py-20 bg-linear-to-r from-white to-[#E9F2EE] text-center">
     <p class="text-[#217750] font-medium mb-2">
         Everything you need to deliver
     </p>
@@ -148,7 +170,7 @@
             </div>
         </div>
 
-        <a href="#" class="bg-white text-[#14452F] px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
+        <a href="/register" class="bg-white text-[#14452F] px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
             Get Started Free
         </a>
 
@@ -167,7 +189,7 @@
             </p>
 
             <!-- CTA -->
-            <a href="#" 
+            <a href="/register" 
                 class="inline-block px-4 py-1.5 mt-2 bg-white text-[#14452F] 
                         rounded-xl font-semibold hover:bg-gray-100
                         transition-transform duration-300">
@@ -187,11 +209,11 @@
 
         <!-- Company -->
         <div>
-            <h2 class="font-semibold mb-3">Company</h2>
+            <h2 class="font-semibold mb-3">Social Media</h2>
             <ul class="space-y-3 text-sm opacity-80">
-                <li><a href="#" class="hover:opacity-100">About</a></li>
-                <li><a href="#" class="hover:opacity-100">Careers</a></li>
-                <li><a href="#" class="hover:opacity-100">Contact</a></li>
+                <li><a href="#" class="hover:opacity-100">Twitter</a></li>
+                <li><a href="#" class="hover:opacity-100">Facebook</a></li>
+                <li><a href="#" class="hover:opacity-100">Instagram</a></li>
             </ul>
         </div>
 
@@ -211,13 +233,10 @@
     <div class="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm opacity-70">
         <p>© 2026 Progrest. All rights reserved.</p>
 
-        <div class="flex gap-4 mt-3 md:mt-0">
-            <a href="#" class="hover:opacity-100">Twitter</a>
-            <a href="#" class="hover:opacity-100">LinkedIn</a>
-            <a href="#" class="hover:opacity-100">GitHub</a>
-        </div>
+        <p>Project Planner Platform</p>
     </div>
 </footer>
 
+<script src="resources/js/landing_navbar.js"></script>
 </body>
 </html>
