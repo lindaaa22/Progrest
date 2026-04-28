@@ -45,7 +45,6 @@
         <p class="font-montserrat text-xs uppercase tracking-wide text-gray-500 font-semibold">Themes</p>
     </div>
 
+    
 
-
-    <div class="w-full h-50 bg-black"></div>
 </aside>

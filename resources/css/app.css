@@ -34,3 +34,10 @@
     src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: 700;
 }
+
+:root {
+  --primary-green: #14452F; 
+  --secondary-green:#217750; 
+  --primary-light: #e6f4ee;
+  --border: #e5e7eb;
+}
