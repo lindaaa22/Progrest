@@ -46,7 +46,7 @@
                 <div class="relative w-full flex items-center justify-center mb-3 mt-0">
                     
                     <div class="absolute left-0">
-                        <a href="/landing" class="w-9 h-9 md:w-10 md:h-10 bg-[#14452F] hover:bg-[#217750] text-white rounded-full flex items-center justify-center transition-colors shadow-sm cursor-pointer">
+                        <a href="{{ route('landing.index') }}" class="w-9 h-9 md:w-10 md:h-10 bg-[#14452F] hover:bg-[#217750] text-white rounded-full flex items-center justify-center transition-colors shadow-sm cursor-pointer">
                             <x-lucide-corner-up-left class="w-4 h-4 md:w-5 md:h-5 stroke-[2.5px]" />
                         </a>
                     </div>

@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function() {
     return view('landing.index'); 
-}); 
+})->name('landing.index'); 
 
 Route::get('/register', function() {
     return view('auth.register'); 
 })->name('register.view'); 
 
-Route::get('/login', [AuthController::class, 'index']); 
-Route::post('/login', [AuthController::class, 'login']);
+Route::get('/login', [AuthController::class, 'index'])->name('login.index'); 
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/dashboard', [DashboardController::class, 'index']); 
 Route::get('/projects', [ProjectController::class, 'index']); 
